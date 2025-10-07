@@ -124,13 +124,13 @@ This report analyzes the privacy practices of services found in your Bitwarden v
         
         # Add key findings
         if grade_counts.get('E', 0) > 0:
-            mdfile.write(f"- ⚠️ **{grade_counts['E']} services** have very poor privacy practices (Grade E)\n")
+            mdfile.write(f"- **{grade_counts['E']} services** have very poor privacy practices (Grade E)\n")
         if grade_counts.get('D', 0) > 0:
-            mdfile.write(f"- ⚠️ **{grade_counts['D']} services** have poor privacy practices (Grade D)\n")
+            mdfile.write(f"- **{grade_counts['D']} services** have poor privacy practices (Grade D)\n")
         if grade_counts.get('A', 0) > 0:
-            mdfile.write(f"- ✅ **{grade_counts['A']} services** have excellent privacy practices (Grade A)\n")
+            mdfile.write(f"- **{grade_counts['A']} services** have excellent privacy practices (Grade A)\n")
         if grade_counts.get('B', 0) > 0:
-            mdfile.write(f"- ✅ **{grade_counts['B']} services** have good privacy practices (Grade B)\n")
+            mdfile.write(f"- **{grade_counts['B']} services** have good privacy practices (Grade B)\n")
         
         mdfile.write("\n---\n\n")
         
@@ -148,7 +148,7 @@ This report analyzes the privacy practices of services found in your Bitwarden v
         # Top risky services (E and D grades)
         risky_services = [d for d in domains_data if d.get('grade') in ['E', 'D']]
         if risky_services:
-            mdfile.write("## 🚨 Services with Poor Privacy Practices\n\n")
+            mdfile.write("##Services with Poor Privacy Practices\n\n")
             mdfile.write("| Service | Domain | Grade | ToS;DR ID |\n")
             mdfile.write("|---------|--------|-------|----------|\n")
             
