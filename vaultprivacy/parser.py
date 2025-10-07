@@ -50,7 +50,7 @@ def extract_domains(bitwarden_json_path: str) -> list[str]:
         login = it.get("login", {}) or {}
         uris = login.get("uris") or []
         # Bitwarden exports place the URL in login.uris[].uri
-        # We only need one domain per item, but you can loop all if you prefer
+        # We only need one domain per item
         for u in uris:
             raw = (u or {}).get("uri", "")
             dom = normalize_domain(raw)
