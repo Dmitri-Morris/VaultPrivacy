@@ -135,7 +135,7 @@ This report analyzes the privacy practices of services found in your Bitwarden v
         mdfile.write("\n---\n\n")
         
         # Grade distribution
-        mdfile.write("## 📊 Grade Distribution\n\n")
+        mdfile.write("## Grade Distribution\n\n")
         mdfile.write("| Grade | Count | Percentage |\n")
         mdfile.write("|-------|-------|------------|\n")
         
@@ -161,7 +161,7 @@ This report analyzes the privacy practices of services found in your Bitwarden v
             mdfile.write("\n")
         
         # Complete service list
-        mdfile.write("## 📋 Complete Service Analysis\n\n")
+        mdfile.write("## Complete Service Analysis\n\n")
         mdfile.write("| Service | Domain | Grade | ToS;DR ID | Status |\n")
         mdfile.write("|---------|--------|-------|----------|--------|\n")
         
