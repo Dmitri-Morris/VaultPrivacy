@@ -71,7 +71,7 @@ Examples:
         sys.exit(1)
     
     try:
-        print("🔍 VaultPrivacy - Privacy Analysis Tool")
+        print("VaultPrivacy - Privacy Analysis Tool")
         print("=" * 50)
         
         # Step 1: Extract domains
@@ -131,7 +131,7 @@ Examples:
         
         # Summary
         print("\n" + "=" * 50)
-        print("✅ ANALYSIS COMPLETE!")
+        print("ANALYSIS COMPLETE!")
         print("=" * 50)
         
         # Calculate summary stats
@@ -159,25 +159,25 @@ Examples:
         # Show risky services
         risky_services = [r for r in results if r.get('grade') in ['D', 'E']]
         if risky_services:
-            print(f"\n⚠️  Services with poor privacy practices:")
+            print(f"\n Services with poor privacy practices:")
             for service in risky_services:
                 print(f"   - {service.get('name', service.get('domain'))} ({service.get('domain')}): Grade {service.get('grade')}")
         
-        print(f"\n📁 Reports generated:")
+        print(f"\n Reports generated:")
         for report in reports_generated:
             print(f"   - {report}")
         
-        print("\n🎯 Next steps:")
+        print("\n Next steps:")
         print("   1. Review the generated reports")
         print("   2. Consider alternatives for services with grades D or E")
         print("   3. Research unknown services manually")
         print("   4. Run this analysis periodically")
         
     except KeyboardInterrupt:
-        print("\n\n❌ Analysis interrupted by user")
+        print("\n\n Analysis interrupted by user")
         sys.exit(1)
     except Exception as e:
-        print(f"\n❌ Error: {e}")
+        print(f"\n Error: {e}")
         if args.verbose:
             import traceback
             traceback.print_exc()
